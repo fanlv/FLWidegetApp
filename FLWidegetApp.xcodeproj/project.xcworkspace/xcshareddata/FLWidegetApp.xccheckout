@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E79D086E-6A9D-4873-B5BA-72D28D95BA2C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FLWidegetApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9558E0158E8333B4F4321D584C0F50264D874CBF</key>
+		<string>https://github.com/fanlv/FLWidegetApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FLWidegetApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9558E0158E8333B4F4321D584C0F50264D874CBF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/fanlv/FLWidegetApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9558E0158E8333B4F4321D584C0F50264D874CBF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9558E0158E8333B4F4321D584C0F50264D874CBF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FLWidegetApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
