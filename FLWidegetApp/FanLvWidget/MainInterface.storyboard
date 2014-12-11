@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kHE-AX-l7N"/>
+                        <viewControllerLayoutGuide type="bottom" id="tK0-Sd-KRt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCt-6L-7Oc">
+                                <rect key="frame" x="68" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="afx-eH-Syu"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="a1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="a2.png"/>
+                                <connections>
+                                    <action selector="locationSwitchClick:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="3Ze-TO-uKG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkc-9o-lwS">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="ecw-g6-uoF"/>
+                                </constraints>
+                                <state key="normal" title="Button" backgroundImage="data1.png">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="data2.png">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dataSwitchClick:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Isa-gt-GAD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Jkc-9o-lwS" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="2zS-1Z-Wn1"/>
+                            <constraint firstItem="hCt-6L-7Oc" firstAttribute="leading" secondItem="Jkc-9o-lwS" secondAttribute="trailing" constant="8" symbolic="YES" id="C0I-Qe-p6Y"/>
+                            <constraint firstItem="Jkc-9o-lwS" firstAttribute="top" secondItem="hCt-6L-7Oc" secondAttribute="top" id="Gek-ph-X9U"/>
+                            <constraint firstItem="Jkc-9o-lwS" firstAttribute="top" secondItem="kHE-AX-l7N" secondAttribute="bottom" id="nmF-I8-ogM"/>
+                            <constraint firstItem="Jkc-9o-lwS" firstAttribute="bottom" secondItem="tK0-Sd-KRt" secondAttribute="top" id="vsO-Kg-v9h"/>
+                            <constraint firstItem="hCt-6L-7Oc" firstAttribute="bottom" secondItem="tK0-Sd-KRt" secondAttribute="top" id="y31-T9-3fc"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="60"/>
+                    <connections>
+                        <outlet property="cellularBtn" destination="Jkc-9o-lwS" id="qzc-8d-P4s"/>
+                        <outlet property="locationBtn" destination="hCt-6L-7Oc" id="eDg-D1-2CZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331" y="238"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="a1.png" width="128" height="128"/>
+        <image name="a2.png" width="128" height="128"/>
+        <image name="data1.png" width="210" height="210"/>
+        <image name="data2.png" width="210" height="210"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
