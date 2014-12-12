@@ -48,6 +48,10 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="kVN-0Y-JXQ" secondAttribute="bottom" constant="249" id="yXo-in-8el"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mySwitch" destination="QqO-Dr-eef" id="gRE-gl-blP"/>
+                        <outlet property="showLabel" destination="XAA-OU-nLg" id="tpb-pF-uYI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
