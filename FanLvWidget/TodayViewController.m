@@ -60,10 +60,22 @@ void CTRegistrationSetMaxAllowedDataRate(CFStringRef dataRate);
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.preferredContentSize = CGSizeMake(0, 60);
+    
+    
+    [self.cellularBtn setBackgroundImage:[UIImage imageNamed:@"data-off2"] forState:UIControlStateNormal];
+    [self.cellularBtn setBackgroundImage:[UIImage imageNamed:@"data-on2"] forState:UIControlStateSelected];
+
+    [self._4GDataBtn setBackgroundImage:[UIImage imageNamed:@"3g-off2"] forState:UIControlStateNormal];
+    [self._4GDataBtn setBackgroundImage:[UIImage imageNamed:@"3g-on2"] forState:UIControlStateSelected];
+    
+    [self.locationBtn setBackgroundImage:[UIImage imageNamed:@"location-off2"] forState:UIControlStateNormal];
+    [self.locationBtn setBackgroundImage:[UIImage imageNamed:@"location-on2"] forState:UIControlStateSelected];
+    
+    self.preferredContentSize = CGSizeMake(0, 70);
     self.cellularBtn.selected = [self getCellDataState];
     self.locationBtn.selected = [CLLocationManager locationServicesEnabled];
     self._4GDataBtn.selected = [self is4GOR3GStateOn];
+    self._4GDataBtn.enabled = self.cellularBtn.selected;
     
 }
 
@@ -74,6 +86,11 @@ void CTRegistrationSetMaxAllowedDataRate(CFStringRef dataRate);
 - (IBAction)dataSwitchClick:(UIButton *)sender
 {
     sender.selected = !sender.selected;
+    self._4GDataBtn.enabled = sender.selected;
+    if(!sender.selected)//关掉数据开关的时候也关掉4G
+    {
+        [self set4GState:NO];
+    }
     [self setCellDataState:sender.selected];
 }
 
@@ -101,7 +118,7 @@ void CTRegistrationSetMaxAllowedDataRate(CFStringRef dataRate);
 
 - (UIEdgeInsets)widgetMarginInsetsForProposedMarginInsets:(UIEdgeInsets)margins
 {
-    margins.bottom = 0.0;
+    margins.bottom = 5.0;
     return margins;
 }
 

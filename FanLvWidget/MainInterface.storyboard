@@ -9,28 +9,28 @@
             <objects>
                 <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="hCt-6L-7Oc">
-                                <rect key="frame" x="68" y="0.0" width="60" height="60"/>
+                                <rect key="frame" x="68" y="5" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="3g-off.png">
+                                <state key="normal" backgroundImage="3g-off1.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" backgroundImage="3g-on.png"/>
+                                <state key="selected" backgroundImage="3g-on1.png"/>
                                 <connections>
                                     <action selector="FourGDataBtnClick:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="Ufm-ZP-oWY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="Jkc-9o-lwS">
-                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                <rect key="frame" x="0.0" y="5" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" backgroundImage="data-off.png">
+                                <state key="normal" title="Button" backgroundImage="data-off1.png">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" backgroundImage="data-on.png">
+                                <state key="selected" backgroundImage="data-on1.png">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -38,12 +38,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="OQE-WP-1JY">
-                                <rect key="frame" x="136" y="0.0" width="60" height="60"/>
+                                <rect key="frame" x="136" y="5" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="location-off.png">
+                                <state key="normal" backgroundImage="location-off1.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" backgroundImage="location-on.png"/>
+                                <state key="selected" backgroundImage="location-on1.png"/>
                                 <connections>
                                     <action selector="locationSwitchClick:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="a14-lC-ShX"/>
                                 </connections>
@@ -55,7 +55,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="60"/>
+                    <size key="freeformSize" width="320" height="70"/>
                     <connections>
                         <outlet property="_4GDataBtn" destination="hCt-6L-7Oc" id="8S6-qh-Vdk"/>
                         <outlet property="cellularBtn" destination="Jkc-9o-lwS" id="qzc-8d-P4s"/>
@@ -68,12 +68,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="3g-off.png" width="59" height="60"/>
-        <image name="3g-on.png" width="59" height="60"/>
-        <image name="data-off.png" width="59" height="60"/>
-        <image name="data-on.png" width="59" height="60"/>
-        <image name="location-off.png" width="59" height="60"/>
-        <image name="location-on.png" width="59" height="60"/>
+        <image name="3g-off1.png" width="120" height="120"/>
+        <image name="3g-on1.png" width="120" height="120"/>
+        <image name="data-off1.png" width="120" height="120"/>
+        <image name="data-on1.png" width="120" height="120"/>
+        <image name="location-off1.png" width="120" height="120"/>
+        <image name="location-on1.png" width="120" height="120"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
