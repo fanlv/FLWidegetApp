@@ -62,14 +62,24 @@ void CTRegistrationSetMaxAllowedDataRate(CFStringRef dataRate);
     [super viewDidLoad];
     
     
-    [self.cellularBtn setBackgroundImage:[UIImage imageNamed:@"data-off2"] forState:UIControlStateNormal];
-    [self.cellularBtn setBackgroundImage:[UIImage imageNamed:@"data-on2"] forState:UIControlStateSelected];
+    [self.cellularBtn setBackgroundImage:[UIImage imageNamed:@"data-off"] forState:UIControlStateNormal];
+    [self.cellularBtn setBackgroundImage:[UIImage imageNamed:@"data-on"] forState:UIControlStateSelected];
 
-    [self._4GDataBtn setBackgroundImage:[UIImage imageNamed:@"3g-off2"] forState:UIControlStateNormal];
-    [self._4GDataBtn setBackgroundImage:[UIImage imageNamed:@"3g-on2"] forState:UIControlStateSelected];
+    if ([self supportLte])
+    {
+        [self._4GDataBtn setBackgroundImage:[UIImage imageNamed:@"4g-off"] forState:UIControlStateNormal];
+        [self._4GDataBtn setBackgroundImage:[UIImage imageNamed:@"4g-on"] forState:UIControlStateSelected];
+    }
+    else
+    {
+        [self._4GDataBtn setBackgroundImage:[UIImage imageNamed:@"3g-off"] forState:UIControlStateNormal];
+        [self._4GDataBtn setBackgroundImage:[UIImage imageNamed:@"3g-on"] forState:UIControlStateSelected];
+    }
     
-    [self.locationBtn setBackgroundImage:[UIImage imageNamed:@"location-off2"] forState:UIControlStateNormal];
-    [self.locationBtn setBackgroundImage:[UIImage imageNamed:@"location-on2"] forState:UIControlStateSelected];
+    
+    
+    [self.locationBtn setBackgroundImage:[UIImage imageNamed:@"location-off"] forState:UIControlStateNormal];
+    [self.locationBtn setBackgroundImage:[UIImage imageNamed:@"location-on"] forState:UIControlStateSelected];
     
     self.preferredContentSize = CGSizeMake(0, 70);
     self.cellularBtn.selected = [self getCellDataState];
@@ -90,6 +100,7 @@ void CTRegistrationSetMaxAllowedDataRate(CFStringRef dataRate);
     if(!sender.selected)//关掉数据开关的时候也关掉4G
     {
         [self set4GState:NO];
+        self._4GDataBtn.selected = NO;
     }
     [self setCellDataState:sender.selected];
 }
@@ -104,9 +115,11 @@ void CTRegistrationSetMaxAllowedDataRate(CFStringRef dataRate);
 - (IBAction)locationSwitchClick:(UIButton *)sender
 {
     sender.selected = !sender.selected;
-//    [objc_getClass("CLLocationManager") setLocationServicesEnabled:sender.selected];
-//    BOOL b= [CLLocationManager locationServicesEnabled];
-//    NSLog(@"%d",b);
+    id CLLocationManager1 = objc_getClass("CLLocationManager");
+
+    [CLLocationManager1 setLocationServicesEnabled:sender.selected];
+    BOOL b= [CLLocationManager locationServicesEnabled];
+    NSLog(@"%d",b);
 }
 
 #pragma mark - NCWidgetProviding Delegate
