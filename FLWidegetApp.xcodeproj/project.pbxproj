@@ -22,6 +22,8 @@
 		691F75901A3835E5007265B8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691F758F1A3835E5007265B8 /* CoreLocation.framework */; };
 		691F75911A3836D0007265B8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691F74F91A381C01007265B8 /* CoreTelephony.framework */; };
 		691F75961A3838B8007265B8 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691F75941A3838B8007265B8 /* LocalAuthentication.framework */; };
+		E5BB90BD1A3DD56C00112B5B /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691F75941A3838B8007265B8 /* LocalAuthentication.framework */; };
+		E5BB90C11A3DD9D300112B5B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5BB90C01A3DD9D300112B5B /* MapKit.framework */; };
 		E5BE01B21A3B1868001ADE2E /* aa1b1.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BE01AD1A3B1868001ADE2E /* aa1b1.png */; };
 		E5BE01D31A3B38FC001ADE2E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691F758F1A3835E5007265B8 /* CoreLocation.framework */; };
 		E5D437B21A3BE44900E6DC14 /* fl.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D437AC1A3BE44900E6DC14 /* fl.png */; };
@@ -96,6 +98,7 @@
 		691F758F1A3835E5007265B8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		691F75931A3838B8007265B8 /* libAWDProtobufLocation.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libAWDProtobufLocation.dylib; path = usr/lib/libAWDProtobufLocation.dylib; sourceTree = SDKROOT; };
 		691F75941A3838B8007265B8 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		E5BB90C01A3DD9D300112B5B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E5BE01AD1A3B1868001ADE2E /* aa1b1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aa1b1.png; sourceTree = "<group>"; };
 		E5BE01D11A3B276F001ADE2E /* FLWidegetApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FLWidegetApp.entitlements; sourceTree = "<group>"; };
 		E5BE01D21A3B2A37001ADE2E /* FanLvWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FanLvWidget.entitlements; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5BB90C11A3DD9D300112B5B /* MapKit.framework in Frameworks */,
+				E5BB90BD1A3DD56C00112B5B /* LocalAuthentication.framework in Frameworks */,
 				E5BE01D31A3B38FC001ADE2E /* CoreLocation.framework in Frameworks */,
 				691F74F81A381BF3007265B8 /* NotificationCenter.framework in Frameworks */,
 			);
@@ -214,6 +219,7 @@
 		691F74E21A3815FB007265B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E5BB90C01A3DD9D300112B5B /* MapKit.framework */,
 				691F75931A3838B8007265B8 /* libAWDProtobufLocation.dylib */,
 				691F75941A3838B8007265B8 /* LocalAuthentication.framework */,
 				691F758F1A3835E5007265B8 /* CoreLocation.framework */,
@@ -347,6 +353,9 @@
 						DevelopmentTeam = K79R9GFX47;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 						};
