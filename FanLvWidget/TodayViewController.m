@@ -115,11 +115,16 @@ void CTRegistrationSetMaxAllowedDataRate(CFStringRef dataRate);
 - (IBAction)locationSwitchClick:(UIButton *)sender
 {
     sender.selected = !sender.selected;
-    id CLLocationManager1 = objc_getClass("CLLocationManager");
-
-    [CLLocationManager1 setLocationServicesEnabled:sender.selected];
-    BOOL b= [CLLocationManager locationServicesEnabled];
-    NSLog(@"%d",b);
+//    id CLLocationManager1 = objc_getClass("CLLocationManager");
+//
+//    [CLLocationManager1 setLocationServicesEnabled:sender.selected];
+//    BOOL b= [CLLocationManager locationServicesEnabled];
+//    if(b != sender.selected)
+    {
+        NSURL *url = [NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"];
+        [self.extensionContext openURL:url completionHandler:nil];
+    }
+//    NSLog(@"%d",b);
 }
 
 #pragma mark - NCWidgetProviding Delegate
