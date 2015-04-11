@@ -96,13 +96,17 @@ void CTRegistrationSetMaxAllowedDataRate(CFStringRef dataRate);
 - (IBAction)dataSwitchClick:(UIButton *)sender
 {
     sender.selected = !sender.selected;
-    self._4GDataBtn.enabled = sender.selected;
-    if(!sender.selected)//关掉数据开关的时候也关掉4G
-    {
-        [self set4GState:NO];
-        self._4GDataBtn.selected = NO;
-    }
-    [self setCellDataState:sender.selected];
+//    self._4GDataBtn.enabled = sender.selected;
+//    if(!sender.selected)//关掉数据开关的时候也关掉4G
+//    {
+//        [self set4GState:NO];
+//        self._4GDataBtn.selected = NO;
+//    }
+//    [self setCellDataState:sender.selected];
+    
+    
+    NSURL *url = [NSURL URLWithString:@"prefs:root=MOBILE_DATA_SETTINGS_ID"];
+    [self.extensionContext openURL:url completionHandler:nil];
 }
 
 
